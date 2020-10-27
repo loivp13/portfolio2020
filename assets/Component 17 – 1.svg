@@ -1,0 +1,7 @@
+<svg id="Component_17_1" data-name="Component 17 – 1" xmlns="http://www.w3.org/2000/svg" width="542" height="156" viewBox="0 0 542 156">
+  <text id="GameApp" transform="translate(0 126)" fill="#fff" font-size="117" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">GameApp</tspan></text>
+  <text id="express" transform="translate(80 56)" fill="#fff" font-size="17" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">express</tspan></text>
+  <text id="pug" transform="translate(412 151)" fill="#fff" font-size="17" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">pug</tspan></text>
+  <text id="mongodb" transform="translate(302 151)" fill="#fff" font-size="17" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">mongodb</tspan></text>
+  <text id="passport" transform="translate(477 151)" fill="#fff" font-size="17" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">passport</tspan></text>
+</svg>
