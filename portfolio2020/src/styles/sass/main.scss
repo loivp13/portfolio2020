@@ -1,15 +1,17 @@
 @import "./components/mixins";
 @import "./components/elementsReset";
 @import "./components/cssnormalize";
-
+@import "./components/animation";
 @import "./components/app";
 @import "./components/aboutme";
 @import "./components/contact";
 @import "./components/hero";
 @import "./components/navigation";
 @import "./components/portfolio";
+@import "./components/sticky";
 @import "./components/timeScale";
 
+@import "./components/utility";
 .c_white {
   color: white;
 }
@@ -17,4 +19,8 @@
 #id {
   width: 100vw;
   overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }

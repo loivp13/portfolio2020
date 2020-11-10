@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
-import logo from '../assets/PortfolioLogo.png'
+
+//import from npm
+import Sticky from 'react-stickynode';
+//Images
+import logo from '../assets/PortfolioLogo.svg'
 import menuListIcon from '../assets/MenuIcon.png'
 import menuListCloseIcon from '../assets/MenuClose.png'
 
@@ -8,11 +12,21 @@ export class Navigation extends Component {
     constructor(props){
         super(props)
         this.state = {
-            open:true
+            open:true,
+            sticky: false
         }
     }
+
     handleClick = () => {
-        this.state.open ? this.setState(false): this.setState(true);
+        this.state.open ? this.setState({...this.state, open: false}): this.setState({...this.state, open: true});
+    }
+
+    handleStickyStateChange = (status) => {
+        if(status.status === Sticky.STATUS_ORIGINAL){
+            this.setState({...this.state, sticky: false})
+        } else {
+            this.setState({...this.state, sticky:true})
+        }
     }
 
     renderMenuButtons = () => {
@@ -26,18 +40,19 @@ export class Navigation extends Component {
 
     render() {
         return (
-            <div className='Navigation'>
-                {this.renderMenuButtons()}
-                <div className="Navigation_logo">
-                    <img src={logo} alt="Loi Van Pham/Front End Engineer"/>
+            <Sticky onStateChange={this.handleStickyStateChange} innerZ={35} activeClass={'Sticky_show'} innerClass={'Sticky_inner'}>
+                <div className={`Navigation ${this.state.sticky ? '': 'hidden'}`}>
+                    <div className="Navigation_logo">
+                        <img src={logo} alt="Loi Van Pham/Front End Engineer"/>
+                    </div>
+                    <div className="Navigation_menu">
+                        <div className="Navigation_menu-item">About Me</div>
+                        <div className="Navigation_menu-item">Portfolio</div>
+                        <div className="Navigation_menu-item">Contact</div>
+                        <div className="Navigation_menu-item">Resume</div>
+                    </div>
                 </div>
-                <div className="Navigation_menu">
-                    <div className="Navigation_menu-item">About Me</div>
-                    <div className="Navigation_menu-item">Portfolio</div>
-                    <div className="Navigation_menu-item">Contact</div>
-                    <div className="Navigation_menu-item">Resume</div>
-                </div>
-            </div>
+            </Sticky>
         )
     }
 }

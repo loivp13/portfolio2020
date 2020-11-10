@@ -32,8 +32,8 @@ export class Portfolio extends Component {
                             <div className="Portfolio_Carousel">
                                 <div className="Portfolio_Carousel--item">
                                     <div className="Portfolio_Carousel--item-image">
-                                        <img src={myFoodieDiarySVG} alt="" srcset=""/>
-                                        <img src={myFoodieDiaryHeaderPNG} alt="" srcset=""/>
+                                        <img src={myFoodieDiarySVG} alt="" srcSet=""/>
+                                        <img src={myFoodieDiaryHeaderPNG} alt="" srcSet=""/>
                                     </div>
                                 </div>
                             </div>

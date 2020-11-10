@@ -310,6 +310,20 @@ template {
 [hidden] {
   display: none; }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-5rem); }
+  to {
+    transform: translateY(0); } }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0rem);
+    opacity: 100%; }
+  to {
+    transform: translateY(-5rem);
+    opacity: 0%; } }
+
 div {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
 
@@ -347,12 +361,13 @@ div {
 
 .Contact {
   position: relative;
-  height: 40vh; }
+  height: 60vh;
+  overflow: hidden; }
   .Contact_container {
-    transform: translateY(10%);
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    transform: translateY(20%); }
   .Contact_background {
     width: 100%;
     position: absolute;
@@ -364,10 +379,11 @@ div {
     width: auto;
     font-weight: bold;
     padding: 2rem;
+    margin-bottom: 3rem;
     height: auto; }
   .Contact_menu {
     height: auto;
-    width: 40%;
+    width: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center; }
@@ -394,26 +410,27 @@ div {
     font-size: 2.4rem; }
 
 .Navigation {
-  position: fixed;
-  left: 0;
-  height: 100vh;
-  padding: 1rem;
+  width: 100%;
+  height: 5rem;
+  padding: 3rem;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: rgba(255, 255, 255, 0.713); }
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  box-shadow: 20px 0px 25px;
+  animation: slideDown 0.5s linear; }
   .Navigation_logo {
-    height: auto;
-    margin-bottom: 2rem; }
+    width: auto; }
   .Navigation_menu {
+    width: auto;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     font-size: 2rem; }
     .Navigation_menu > div {
       height: auto;
+      width: auto;
       padding-right: 2rem;
-      text-transform: uppercase;
-      margin-bottom: 2rem; }
+      text-transform: uppercase; }
   .Navigation_menuIcon {
     position: absolute;
     transform: translateX(630%); }
@@ -530,9 +547,17 @@ div {
       flex-direction: column;
       justify-content: space-around; }
 
+.hidden {
+  position: absolute;
+  opacity: 0;
+  animation: slideUp 0.5s; }
+
 .c_white {
   color: white; }
 
 #id {
   width: 100vw;
   overflow: hidden; }
+
+* {
+  box-sizing: border-box; }

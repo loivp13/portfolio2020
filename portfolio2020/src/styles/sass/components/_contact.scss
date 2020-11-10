@@ -1,12 +1,13 @@
 .Contact {
   position: relative;
-  height: 40vh;
+  height: 60vh;
+  overflow: hidden;
 
   &_container {
-    transform: translateY(10%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: translateY(20%);
   }
   &_background {
     @include backgroundCover;
@@ -16,12 +17,13 @@
     color: white;
     @include header();
     padding: 2rem;
+    margin-bottom: 3rem;
     height: auto;
   }
 
   &_menu {
     height: auto;
-    width: 40%;
+    width: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
