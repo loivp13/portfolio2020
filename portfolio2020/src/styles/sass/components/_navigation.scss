@@ -1,0 +1,33 @@
+.Navigation {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.713);
+  &_logo {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  &_menu {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    & > div {
+      height: auto;
+      padding-right: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+  }
+  &_menuIcon {
+    position: absolute;
+    transform: translateX(630%);
+  }
+  &_menuCloseIcon {
+    position: absolute;
+    transform: translateX(630%);
+  }
+}

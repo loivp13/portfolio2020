@@ -1,0 +1,32 @@
+.Contact {
+  position: relative;
+  height: 40vh;
+
+  &_container {
+    transform: translateY(10%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &_background {
+    @include backgroundCover;
+    height: 100%;
+  }
+  &_header {
+    color: white;
+    @include header();
+    padding: 2rem;
+    height: auto;
+  }
+
+  &_menu {
+    height: auto;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--item {
+      width: auto;
+    }
+  }
+}

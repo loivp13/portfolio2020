@@ -1,0 +1,38 @@
+.AboutMe {
+  height: 35vh;
+  &_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_left {
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &-header {
+      @include header;
+      font-weight: bold;
+      height: auto;
+    }
+    &-image {
+      width: auto;
+      height: auto;
+      & > img {
+        width: 10rem;
+        height: auto;
+      }
+    }
+  }
+
+  &_right {
+    width: 30vw;
+    height: auto;
+    &-description {
+      width: auto;
+      font-size: 1.5rem;
+    }
+  }
+}

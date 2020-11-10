@@ -1,0 +1,11 @@
+@mixin backgroundCover {
+  width: 100%;
+  position: absolute;
+  z-index: -5;
+}
+
+@mixin header {
+  font-size: 3.3rem;
+  width: auto;
+  font-weight: bold;
+}

@@ -1,0 +1,20 @@
+@import "./components/mixins";
+@import "./components/elementsReset";
+@import "./components/cssnormalize";
+
+@import "./components/app";
+@import "./components/aboutme";
+@import "./components/contact";
+@import "./components/hero";
+@import "./components/navigation";
+@import "./components/portfolio";
+@import "./components/timeScale";
+
+.c_white {
+  color: white;
+}
+
+#id {
+  width: 100vw;
+  overflow: hidden;
+}
