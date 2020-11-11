@@ -41,7 +41,6 @@ export class Navigation extends Component {
 
     createNavigationClass = () => {
         let NaviClass = `Navigation`
-        console.log(this.state)
         if(this.state.sticky === false && this.state.firstRenderDone === true){
             return NaviClass + ` d_hidden`
         } else if (this.state.sticky === true && this.state.firstRenderDone === true ){

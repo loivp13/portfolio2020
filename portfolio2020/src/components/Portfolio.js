@@ -3,21 +3,45 @@ import React, { Component } from 'react'
 import TimeScale from './TimeScale'
 import Carousel from './Carousel'
 
-import gameAppSVG from '../assets/GameApp.svg';
-import gameDealsSVG from '../assets/GameDeals.svg';
-import netflixSVG from '../assets/Netflix.svg';
 
-import gameDealsHeaderPNG from '../assets/GameDealsHeader.png';
-import gameAppHeaderPNG from '../assets/GameAppHeader.png';
-import netflixHeaderPNG from '../assets/NetflixHeader.png';
 import midWave from '../assets/midWave.png'
 
 
-
 export class Portfolio extends Component {
+     constructor(props){
+        super(props);
+        this.state = {
+            currentItem: 0,
+            projectDates: [['Oct.','Jul'],['Dec.','Jul.'],['Jul.','Apr.'],['Feb.','Dec.']]
+        }
+    }
+
+    componentDidUpdate(){
+        console.log(this.state)
+    }
+
+    updateCurrentItemOnScroll = (e) => {
+      let carouselHeight = e.target.scrollHeight
+      let carouselItemHeight =  carouselHeight/4; 
+      let scrollTop = e.target.scrollTop;
+
+      if(scrollTop < carouselItemHeight) {
+          this.setState({...this.state,currentItem: 0})
+      } else if(scrollTop < 2 * carouselItemHeight){
+          this.setState({...this.state,currentItem: 1})
+      
+      } else if(scrollTop < 3 * carouselItemHeight){
+          this.setState({...this.state,currentItem: 2})
+      } else {
+          this.setState({...this.state, currentItem: 3})
+      }
+
+    }
+    
+ 
     render() {
         return (
-            <div id='portfolio' className='Portfolio'>
+            <div id='portfolio' className='Portfolio' >
                 <img className='Portfolio_background' src={midWave} alt=""/>
                 <div className="Portfolio_container">
                     <div className="Portfolio_header">
@@ -25,10 +49,10 @@ export class Portfolio extends Component {
                     </div>
                     <div className="Portfolio_main">
                         <div className="Portfolio_main--left">
-                            <TimeScale></TimeScale>
+                            <TimeScale currentItem={this.state.currentItem} projectDates={this.state.projectDates[this.state.currentItem]}></TimeScale>
                         </div>
                         <div className="Portfolio_main--right">
-                            <Carousel></Carousel>
+                            <Carousel updateCurrentItemOnScroll={this.updateCurrentItemOnScroll}></Carousel>
                         </div>
                     </div>
                 </div>

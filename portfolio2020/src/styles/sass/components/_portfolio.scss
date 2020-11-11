@@ -1,5 +1,6 @@
 .Portfolio {
   height: 100vh;
+  scroll-snap-align: start;
   &_background {
     @include backgroundCover;
     width: 101%;

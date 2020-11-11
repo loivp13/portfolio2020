@@ -327,6 +327,9 @@ template {
 div {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
 
+.App {
+  scroll-snap-type: y mandatory; }
+
 .AboutMe {
   height: 35vh; }
   .AboutMe_container {
@@ -360,10 +363,18 @@ div {
       font-size: 1.5rem; }
 
 .Carousel {
-  height: auto; }
+  height: 35rem;
+  width: auto;
+  scroll-snap-type: y mandatory;
+  overflow: scroll; }
+  .Carousel::-webkit-scrollbar {
+    display: none; }
+  .Carousel > * {
+    scroll-snap-align: start; }
   .Carousel--item {
-    width: 100%;
-    height: 100%; }
+    width: auto;
+    height: 32rem;
+    margin-bottom: 6rem; }
 
 .Contact {
   position: relative;
@@ -398,7 +409,7 @@ div {
 
 .Hero {
   max-width: 100vw;
-  height: 80vh;
+  height: 70vh;
   color: white;
   display: flex;
   flex-direction: column;
@@ -445,7 +456,8 @@ div {
     transform: translateX(630%); }
 
 .Portfolio {
-  height: 100vh; }
+  height: 100vh;
+  scroll-snap-align: start; }
   .Portfolio_background {
     width: 100%;
     position: absolute;
@@ -520,14 +532,8 @@ div {
     align-items: center;
     justify-content: flex-start;
     left: 10px;
-    top: 25%; }
-    .TimeScale--pointer-triangle {
-      width: 0;
-      height: 0;
-      border-top: 7px solid transparent;
-      border-bottom: 7px solid transparent;
-      border-right: 7px solid white;
-      margin-right: 0.2rem; }
+    top: 25%;
+    transition: all 1s; }
     .TimeScale--pointer-hrLine {
       width: 20px;
       height: 2px;
