@@ -10,6 +10,8 @@ import netflixHeaderPNG from '../assets/NetflixHeader.png';
 import gameDealsHeaderPNG from '../assets/GameDealsHeader.png';
 import gameAppHeaderPNG from '../assets/GameAppHeader.png';
 
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+
 export class Carousel extends Component {
 
     render() {

@@ -59,10 +59,15 @@ export class Navigation extends Component {
                         <img src={logo} alt="Loi Van Pham/Front End Engineer"/>
                     </div>
                     <div className="Navigation_menu">
-                        <div className="Navigation_menu-item">About Me</div>
-                        <div className="Navigation_menu-item">Portfolio</div>
-                        <div className="Navigation_menu-item">Contact</div>
-                        <div className="Navigation_menu-item">Resume</div>
+                        <div className="Navigation_menu-item">
+                            <a href="#aboutMe">About Me</a></div>
+                        <div className="Navigation_menu-item">
+                            <a href="#portfolio">Portfolio</a>
+                        </div>
+                        <div className="Navigation_menu-item">
+                            <a href="#contact">Contact</a>
+                        </div>
+                        <div className="Navigation_menu-item Navigation_resume" onClick={this.props.toggleResume}>Resume</div>
                     </div>
                 </div>
             </Sticky>

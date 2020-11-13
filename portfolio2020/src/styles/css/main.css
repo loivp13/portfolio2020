@@ -1,5 +1,7 @@
 a {
   text-decoration: none; }
+  a:visited {
+    color: black; }
 
 div {
   width: inherit;
@@ -324,11 +326,21 @@ template {
     transform: translateY(-5rem);
     opacity: 0%; } }
 
+@keyframes slideDownResume {
+  from {
+    transform: translateY(-40rem); }
+  to {
+    transform: translateY(0); } }
+
 div {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
 
 .App {
-  scroll-snap-type: y mandatory; }
+  scroll-snap-type: y mandatory;
+  position: relative; }
+
+#aboutMe:visited {
+  color: white; }
 
 .AboutMe {
   height: 35vh; }
@@ -405,7 +417,49 @@ div {
     justify-content: space-between;
     align-items: center; }
     .Contact_menu--item {
-      width: auto; }
+      width: 10rem;
+      height: 8rem; }
+    .Contact_menu--clipboard {
+      position: absolute;
+      animation: slideUpFading 1s; }
+  .Contact_clipboardSVG {
+    width: 2rem;
+    height: 2rem; }
+
+.FlipCard {
+  perspective: 1000px; }
+  .FlipCard:hover .FlipCard_inner {
+    transform: rotateY(180deg); }
+  .FlipCard_inner {
+    position: relative;
+    text-align: center;
+    transition: 0.8s;
+    transform-style: preserve-3d; }
+  .FlipCard_front, .FlipCard_back {
+    height: 100%;
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .FlipCard_front > input, .FlipCard_back > input {
+      margin-right: -2rem;
+      border: none;
+      background-color: #427cae;
+      text-decoration: none;
+      color: white;
+      height: auto; }
+      .FlipCard_front > input:hover, .FlipCard_back > input:hover {
+        cursor: pointer; }
+      .FlipCard_front > input:focus, .FlipCard_back > input:focus {
+        outline: none; }
+  .FlipCard_back {
+    background-color: #427cae;
+    transform: rotateY(180deg); }
+    .FlipCard_back > a {
+      color: white; }
+      .FlipCard_back > a:visited {
+        color: white; }
 
 .Hero {
   max-width: 100vw;
@@ -454,6 +508,8 @@ div {
   .Navigation_menuCloseIcon {
     position: absolute;
     transform: translateX(630%); }
+  .Navigation_resume:hover {
+    cursor: pointer; }
 
 .Portfolio {
   height: 100vh;
@@ -463,7 +519,7 @@ div {
     position: absolute;
     z-index: -5;
     width: 101%;
-    height: 135%;
+    height: 60%;
     left: -1%; }
   .Portfolio_container {
     transform: translateY(20%);
@@ -494,6 +550,24 @@ div {
       width: 60%;
       height: auto; }
 
+.Resume {
+  width: auto;
+  height: auto;
+  animation: slideDownResume 1s; }
+  .Resume_container {
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.398); }
+
+.color_white {
+  color: white !important; }
+
 .TimeScale {
   height: 100%;
   display: flex;
@@ -515,6 +589,37 @@ div {
     width: 10px;
     border-radius: 5px;
     background-color: white; }
+  .TimeScale--projectCircles {
+    height: 70%;
+    left: -2px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+  .TimeScale--smCircle1 {
+    height: 7px;
+    width: 7px;
+    border-radius: 7px;
+    background-color: white;
+    transform: translateY(777%); }
+  .TimeScale--smCircle2 {
+    height: 7px;
+    width: 7px;
+    border-radius: 7px;
+    background-color: white;
+    transform: translateY(1510%); }
+  .TimeScale--smCircle3 {
+    height: 7px;
+    width: 7px;
+    border-radius: 7px;
+    background-color: white;
+    transform: translateY(600%); }
+  .TimeScale--smCircle4 {
+    height: 7px;
+    width: 7px;
+    border-radius: 7px;
+    background-color: white;
+    transform: translateY(605%); }
   .TimeScale--dates {
     height: 70%;
     left: -50px;
@@ -571,3 +676,6 @@ div {
 
 * {
   box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }

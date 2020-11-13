@@ -24,6 +24,44 @@
     border-radius: 5px;
     background-color: white;
   }
+  &--projectCircles {
+    height: 70%;
+    left: -2px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &--smCircle {
+    &1 {
+      height: 7px;
+      width: 7px;
+      border-radius: 7px;
+      background-color: white;
+      transform: translateY(777%);
+    }
+    &2 {
+      height: 7px;
+      width: 7px;
+      border-radius: 7px;
+      background-color: white;
+      transform: translateY(1510%);
+    }
+    &3 {
+      height: 7px;
+      width: 7px;
+      border-radius: 7px;
+      background-color: white;
+      transform: translateY(600%);
+    }
+    &4 {
+      height: 7px;
+      width: 7px;
+      border-radius: 7px;
+      background-color: white;
+      transform: translateY(605%);
+    }
+  }
   &--dates {
     height: 70%;
     left: -50px;

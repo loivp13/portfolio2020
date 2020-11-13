@@ -1,0 +1,18 @@
+.Resume {
+  width: auto;
+  height: auto;
+  animation: slideDownResume 1s;
+  &_container {
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.398);
+  }
+  &_page {
+  }
+}

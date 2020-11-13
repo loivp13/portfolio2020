@@ -32,4 +32,9 @@
     position: absolute;
     transform: translateX(630%);
   }
+  &_resume {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

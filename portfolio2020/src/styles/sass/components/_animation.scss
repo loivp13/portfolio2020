@@ -16,3 +16,12 @@
     opacity: 0%;
   }
 }
+
+@keyframes slideDownResume {
+  from {
+    transform: translateY(-40rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

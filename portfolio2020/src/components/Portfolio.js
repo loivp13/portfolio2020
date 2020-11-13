@@ -17,7 +17,6 @@ export class Portfolio extends Component {
     }
 
     componentDidUpdate(){
-        console.log(this.state)
     }
 
     updateCurrentItemOnScroll = (e) => {

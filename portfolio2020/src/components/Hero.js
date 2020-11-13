@@ -11,7 +11,8 @@ export class Hero extends Component {
                 <div className="Hero_main">
                     <img src={`${heroTitle}`} alt=""/>
                 </div>
-                <a className='c_white Hero_scrollLink' href="#portfolio">View Portfolio</a>
+                {/* aboutMe id is used here to fix view while jumping to ids during nagivation*/}
+                <a id='aboutMe' className='c_white Hero_scrollLink' href="#portfolio">View Portfolio</a>
             
             </div>
         )

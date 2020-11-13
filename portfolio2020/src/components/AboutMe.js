@@ -4,7 +4,7 @@ import portfolioImage from '../assets/gitHubLogo.png'
 export class AboutMe extends Component {
     render() {
         return (
-            <div className='AboutMe'>
+            <div id='aboutMe'className='AboutMe'>
                 <div className="AboutMe_container">
                     <div className="AboutMe_left">
                         <div className="AboutMe_left-header">

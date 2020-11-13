@@ -1,0 +1,46 @@
+.FlipCard {
+  perspective: 1000px;
+  &:hover &_inner {
+    transform: rotateY(180deg);
+  }
+  &_inner {
+    position: relative;
+    text-align: center;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  &_front,
+  &_back {
+    height: 100%;
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > input {
+      margin-right: -2rem;
+      border: none;
+      background-color: #427cae;
+      text-decoration: none;
+      color: white;
+      height: auto;
+      &:hover {
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &_back {
+    background-color: #427cae;
+    transform: rotateY(180deg);
+    & > a {
+      color: white;
+      &:visited {
+        color: white;
+      }
+    }
+  }
+}

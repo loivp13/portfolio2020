@@ -4,7 +4,6 @@ export class TimeScale extends Component {
 
       triggerPointerAnimation = () => {
          let pointerStyle = {transform: 'translateY(0%)'}
-        console.log(this.props.currentItem)
         switch (this.props.currentItem){
             case 0:
                 return pointerStyle
@@ -17,6 +16,8 @@ export class TimeScale extends Component {
             case 3:
                  pointerStyle.transform = 'translateY(295%)';
                  return pointerStyle
+            default:
+                break
 
             
                 
@@ -41,6 +42,13 @@ export class TimeScale extends Component {
                         <div className="TimeScale--circle"></div>
                         <div className="TimeScale--circle"></div>
                     </div>
+                    <div className="TimeScale--projectCircles">
+                        <div className="TimeScale--smCircle1"></div>
+                        <div className="TimeScale--smCircle2"></div>
+                        <div className="TimeScale--smCircle3"></div>
+                        <div className="TimeScale--smCircle4"></div>
+                    </div>
+
                     <div className="TimeScale--dates">
                         <div className="TimeScale--date">2021</div>
                         <div className="TimeScale--date">2020</div>
