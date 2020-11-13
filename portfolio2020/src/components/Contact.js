@@ -21,7 +21,7 @@ export class Contact extends Component {
                             front={<img src={gmailPNG} alt=""/>}
                             back={
                                 <>
-                                <a href='mailto:loivp13@gmail.com'id='email' onClick={this.props.toggleResume} >loivp13@gmail.com</a>
+                                <a href='mailto:loivp13@gmail.com'id='email'>Email</a>
                                
                                 </>
                             }
@@ -35,7 +35,7 @@ export class Contact extends Component {
                             front={  <img src={gitHubLogoPNG} alt=""/>}
                             back={
                                 <>
-                                <a href='https://github.com/loivp13' >github.com/loivp13</a>
+                                <a target='_blank' href='https://github.com/loivp13' >GitHub</a>
                                
                                 </>
                             }
@@ -45,7 +45,16 @@ export class Contact extends Component {
 
                     </div>
                     <div className="Contact_menu--item">
-                        <img src={linkedInPNG} alt=""/>
+                         <FlipCard
+                            front={  <img src={linkedInPNG} alt=""/>}
+                            back={
+                                <>
+                                <a target='_blank' href='https://github.com/loivp13' >LinkedIn</a>
+                               
+                                </>
+                            }
+                        >
+                        </FlipCard>
                     </div>
                 </div>
                </div>
