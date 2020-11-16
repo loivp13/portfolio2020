@@ -4,7 +4,6 @@ import botWave from '../assets/BotWave.png'
 import gmailPNG from '../assets/googleMail.png'
 import gitHubLogoPNG from '../assets/gitHubLogo.png'
 import linkedInPNG from '../assets/LinkedIn.png'
-import clipBoardSVG from '../assets/clipboardSVG.svg'
 import FlipCard from '../components/FlipCard'
 
 export class Contact extends Component {
