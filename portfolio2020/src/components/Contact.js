@@ -20,7 +20,7 @@ export class Contact extends Component {
                             front={<img src={gmailPNG} alt=""/>}
                             back={
                                 <>
-                                <a href='mailto:loivp13@gmail.com'id='email'>Email</a>
+                                <a  rel="noreferrer" href='mailto:loivp13@gmail.com'id='email'>Email</a>
                                
                                 </>
                             }
@@ -34,7 +34,7 @@ export class Contact extends Component {
                             front={  <img src={gitHubLogoPNG} alt=""/>}
                             back={
                                 <>
-                                <a target='_blank' href='https://github.com/loivp13' >GitHub</a>
+                                <a  rel="noreferrer"  target='_blank' href='https://github.com/loivp13' >GitHub</a>
                                
                                 </>
                             }
@@ -48,7 +48,7 @@ export class Contact extends Component {
                             front={  <img src={linkedInPNG} alt=""/>}
                             back={
                                 <>
-                                <a target='_blank' href='https://github.com/loivp13' >LinkedIn</a>
+                                <a  rel="noreferrer" target='_blank' href='https://github.com/loivp13' >LinkedIn</a>
                                
                                 </>
                             }
