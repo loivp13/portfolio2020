@@ -16,8 +16,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "SET PORT=6000 && react-scripts start",
-    "build": "SET PORT=6000 && react-scripts build",
+    "start": "SET PORT=3001 && react-scripts start",
+    "build": "SET PORT=3001 && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar src/styles/sass/main.scss -o src/styles/css",
