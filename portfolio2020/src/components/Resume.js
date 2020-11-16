@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Document, Page, pdfjs } from "react-pdf";
+import windowSize from 'react-window-size';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
 
 export class Resume extends Component {
 
@@ -34,6 +36,23 @@ export class Resume extends Component {
         this.setState({...this.state, pxScrolled:0})
         window.removeEventListener('scroll',this.determinePxScroll)
     }
+    renderScale () {
+      if(  this.props.windowWidth < 1200 ){
+            return .9
+        }
+       else if (this.props.windowWidth  < 900 ){
+            return .7
+        }
+        else if(this.props.windowSize < 720) {
+            return .5
+        }
+        else if(this.props.windowSize < 600) {
+            return .3
+        }
+        else {
+            return 1
+        }
+    }
     
     render() {
         return (
@@ -42,11 +61,11 @@ export class Resume extends Component {
                <Document className='Resume'
                file='Loi-Pham_Resume11-20.pdf'
                >
-                   <Page onGetAnnotationsSuccess={this.changeTargetToBlank}  width={650}  className='Resume_page' pageNumber={1}></Page>
+                   <Page scale={this.renderScale()} onGetAnnotationsSuccess={this.changeTargetToBlank}  width={650}  className='Resume_page' pageNumber={1}></Page>
                </Document>
                </div>
         )
     }
 }
 
-export default Resume
+export default windowSize(Resume)

@@ -449,7 +449,7 @@ div {
       .Carousel--item-image-header {
         width: auto;
         height: 20%; }
-        @media only screen and (max-width: 37.5em) {
+        @media screen and (max-width: 970px) {
           .Carousel--item-image-header {
             height: 15%; } }
 
