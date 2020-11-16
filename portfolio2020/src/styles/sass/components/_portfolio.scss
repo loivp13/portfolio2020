@@ -1,6 +1,9 @@
 .Portfolio {
   height: 100vh;
   scroll-snap-align: start;
+  @include respond("phone") {
+    height: 70vh;
+  }
   &_background {
     @include backgroundCover;
     width: 101%;

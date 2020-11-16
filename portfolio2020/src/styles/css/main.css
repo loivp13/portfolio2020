@@ -693,6 +693,9 @@ div {
 .Portfolio {
   height: 100vh;
   scroll-snap-align: start; }
+  @media only screen and (max-width: 37.5em) {
+    .Portfolio {
+      height: 70vh; } }
   .Portfolio_background {
     width: 100%;
     position: absolute;
