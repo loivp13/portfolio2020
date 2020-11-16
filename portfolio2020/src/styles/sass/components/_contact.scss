@@ -27,11 +27,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include respond("tab-port") {
+      width: 80%;
+    }
+    @include respond("phone") {
+      // width: 70%;
+    }
     &--item {
       width: 10rem;
       height: 8rem;
       font-weight: 2rem;
       font-size: 2rem;
+      @include respond("phone") {
+        font-size: 1rem;
+        width: 9rem;
+      }
     }
     &--clipboard {
       position: absolute;

@@ -33,6 +33,13 @@
       }
     }
   }
+  &_front {
+    & > img {
+      @include respond("phone") {
+        width: 50%;
+      }
+    }
+  }
   &_back {
     background-color: #427cae;
     transform: rotateY(180deg);

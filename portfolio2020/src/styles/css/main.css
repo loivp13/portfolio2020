@@ -481,11 +481,18 @@ div {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .Contact_menu {
+        width: 80%; } }
     .Contact_menu--item {
       width: 10rem;
       height: 8rem;
       font-weight: 2rem;
       font-size: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .Contact_menu--item {
+          font-size: 1rem;
+          width: 9rem; } }
     .Contact_menu--clipboard {
       position: absolute;
       animation: slideUpFading 1s; }
@@ -520,6 +527,9 @@ div {
         cursor: pointer; }
       .FlipCard_front > input:focus, .FlipCard_back > input:focus {
         outline: none; }
+  @media only screen and (max-width: 37.5em) {
+    .FlipCard_front > img {
+      width: 50%; } }
   .FlipCard_back {
     background-color: #427cae;
     transform: rotateY(180deg); }
