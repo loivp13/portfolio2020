@@ -53,6 +53,7 @@ export class Carousel extends Component {
 
         return (
                 <div className="Carousel" onScroll={this.props.updateCurrentItemOnScroll}>
+                <a target='_blank' href="https://myfoodiediary.dev/">
                     <div className="Carousel--item">
                         <div className="Carousel--item-image">
                             {this.renderResponsiveCarousel(
@@ -68,7 +69,9 @@ export class Carousel extends Component {
                             <img className='Carousel--item-image-header' src={myFoodieDiaryHeaderPNG} alt="" srcSet=""/>
                         </div>
                     </div>
-                    <div className="Carousel--item">
+                </a>
+                <a target='_blank' href="https://netflix-react.herokuapp.com/">
+                 <div className="Carousel--item">
                         <div className="Carousel--item-image">
                             {this.renderResponsiveCarousel(
                                     [
@@ -82,7 +85,9 @@ export class Carousel extends Component {
                             <img className='Carousel--item-image-header' src={netflixHeaderPNG} alt="" srcSet=""/>
                         </div>
                     </div>
-                    <div className="Carousel--item">
+                </a>
+                <a target='_blank' href="https://gameapp-reactv1.herokuapp.com/">
+                 <div className="Carousel--item">
                         <div className="Carousel--item-image">
                         {this.renderResponsiveCarousel(
                                     [
@@ -97,7 +102,9 @@ export class Carousel extends Component {
                             <img className='Carousel--item-image-header' src={gameDealsHeaderPNG} alt="" srcSet=""/>
                         </div>
                     </div>
-                    <div className="Carousel--item">
+                </a>
+                <a target='_blank' href="https://gameappv2.herokuapp.com/">
+                   <div className="Carousel--item">
                         <div className="Carousel--item-image">
                             {this.renderResponsiveCarousel(
                                     [
@@ -111,6 +118,11 @@ export class Carousel extends Component {
                             <img className='Carousel--item-image-header' src={gameAppHeaderPNG} alt="" srcSet=""/>
                         </div>
                     </div>
+                </a>
+                    
+                   
+                   
+                 
                 </div>
         )
     }
