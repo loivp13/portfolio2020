@@ -30,7 +30,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   &--smCircle {
     &1 {
@@ -38,28 +38,32 @@
       width: 7px;
       border-radius: 7px;
       background-color: white;
-      transform: translateY(777%);
+      position: absolute;
+      top: 18%;
     }
     &2 {
       height: 7px;
       width: 7px;
       border-radius: 7px;
       background-color: white;
-      transform: translateY(1510%);
+      position: absolute;
+      top: 72%;
     }
     &3 {
       height: 7px;
       width: 7px;
       border-radius: 7px;
       background-color: white;
-      transform: translateY(600%);
+      top: 77%;
+      position: absolute;
     }
     &4 {
       height: 7px;
       width: 7px;
       border-radius: 7px;
       background-color: white;
-      transform: translateY(605%);
+      top: 98%;
+      position: absolute;
     }
   }
   &--dates {
@@ -75,17 +79,22 @@
     height: auto;
   }
   &--pointer {
-    height: 6rem;
+    height: 7px;
     position: absolute;
 
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
 
     left: 10px;
-    top: 25%;
 
     transition: all 1s;
+    &_dates {
+      height: 6rem;
+      @include respond("tab-port") {
+        font-size: 0.9rem;
+      }
+    }
 
     &-triangle {
       // width: 0;
@@ -100,6 +109,10 @@
       height: 2px;
       background-color: white;
       border-radius: 5px;
+      @include respond("phone") {
+        width: 8px;
+        height: 1px;
+      }
     }
     &-vtLine {
       height: 3rem;
@@ -109,6 +122,10 @@
 
       background-color: white;
       transform: translate(100%);
+      @include respond("phone") {
+        height: 2rem;
+        width: 1px;
+      }
     }
     &-date {
       height: auto;

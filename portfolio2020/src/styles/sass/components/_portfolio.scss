@@ -25,20 +25,29 @@
   }
 
   &_main {
+    width: 70%;
     height: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
     &--left {
-      min-width: 12%;
+      width: auto;
       height: 100%;
+      margin-right: 10vw;
 
       display: flex;
       justify-content: center;
+      @include respond("tab-port") {
+        margin-right: 15vw;
+      }
+
+      @include respond("phone") {
+        // margin-right: 20vw;
+      }
     }
     &--right {
-      width: 60%;
+      width: auto;
       height: auto;
     }
   }

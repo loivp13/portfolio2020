@@ -12,6 +12,7 @@
     "react-pdf": "^5.0.0",
     "react-scripts": "4.0.0",
     "react-stickynode": "^3.0.4",
+    "react-window-size": "^1.2.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

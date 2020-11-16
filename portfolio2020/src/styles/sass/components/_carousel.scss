@@ -6,12 +6,51 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @include respond("tab-land") {
+    height: 28rem;
+    width: 30rem;
+  }
+  @include respond("tab-port") {
+    height: 32rem;
+    width: 32rem;
+  }
+  @media screen and(max-width: 970px) {
+    height: 30rem;
+    width: 25rem;
+  }
+  @include respond("phone") {
+    height: 20rem;
+    width: 15rem;
+  }
   & > * {
     scroll-snap-align: start;
   }
   &--item {
-    width: auto;
-    height: 32rem;
+    width: 100%;
+    height: 100%;
     margin-bottom: 6rem;
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include respond("phone") {
+        height: 80%;
+      }
+      &-devices {
+        width: 100%;
+        height: 70%;
+      }
+      &-header {
+        width: auto;
+        height: 20%;
+        @include respond("phone") {
+          height: 15%;
+        }
+      }
+    }
   }
 }

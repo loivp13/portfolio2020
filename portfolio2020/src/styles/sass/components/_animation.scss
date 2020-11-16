@@ -25,3 +25,18 @@
     transform: translateY(0);
   }
 }
+
+@keyframes slideshow {
+  16.5% {
+    transform: translateX(0%);
+  }
+  49.5% {
+    transform: translateX(-100%);
+  }
+  83.16% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}

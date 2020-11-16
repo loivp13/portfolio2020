@@ -12,15 +12,15 @@ export class Navigation extends Component {
     constructor(props){
         super(props)
         this.state = {
-            open:true,
+            open:0,
             sticky: false,
             firstRenderDone: false //used to stop disappearing animation on first render
         }
     }
 
-    // handleClick = () => {
-    //     this.state.open ? this.setState({...this.state, open: false}): this.setState({...this.state, open: true});
-    // }
+    handleToggleMenu = () => {
+        this.state.open ? this.setState({...this.state, open: false}): this.setState({...this.state, open: true});
+    }
 
     handleStickyStateChange = (status) => {
         if(status.status === Sticky.STATUS_ORIGINAL){
@@ -49,6 +49,30 @@ export class Navigation extends Component {
             return NaviClass  + ` d_none`
         }
     }
+
+    renderButtons = () => {
+        if(this.state.open === 0){
+            return (
+                <div onClick={this.handleToggleMenu} className="Navigation_menu--buttonOpen">
+                    <img src={menuListIcon} alt=""/>
+                </div>)
+        }
+        else{
+            return (
+                    <div onClick={this.handleToggleMenu} className="Navigation_menu--buttonClose">
+                        <img src={menuListCloseIcon} alt=""/>
+                    </div>)
+        }
+            
+    }
+
+    toggleDisplayStyle = () => {
+        if(this.state.open) {
+            return 'Navigation_menu-items--displayOverride'
+        } else {
+            return ''
+        }
+    }
     
 
     render() {
@@ -56,18 +80,23 @@ export class Navigation extends Component {
             <Sticky onStateChange={this.handleStickyStateChange} innerZ={35} activeClass={'Sticky_show'} innerClass={'Sticky_inner'}>
                 <div className={this.createNavigationClass()}>
                     <div className="Navigation_logo">
-                        <img src={logo} alt="Loi Van Pham/Front End Engineer"/>
+                        <img className='Navigation_logo--image' src={logo} alt="Loi Van Pham/Front End Engineer"/>
                     </div>
                     <div className="Navigation_menu">
-                        <div className="Navigation_menu-item">
-                            <a href="#aboutMe">About Me</a></div>
-                        <div className="Navigation_menu-item">
-                            <a href="#portfolio">Portfolio</a>
+                    <div className="Navigation_menu--buttons">
+                        {this.renderButtons()}
+                    </div>
+                        <div className={`Navigation_menu-items ${this.toggleDisplayStyle()}`}>
+                            <div className="Navigation_menu-item">
+                                <a href="#aboutMe">About Me</a></div>
+                            <div className="Navigation_menu-item">
+                                <a href="#portfolio">Portfolio</a>
+                            </div>
+                            <div className="Navigation_menu-item">
+                                <a href="#contact">Contact</a>
+                            </div>
+                            <div className="Navigation_menu-item Navigation_resume" onClick={this.props.toggleResume}><div id="resume">Resume</div></div>
                         </div>
-                        <div className="Navigation_menu-item">
-                            <a href="#contact">Contact</a>
-                        </div>
-                        <div className="Navigation_menu-item Navigation_resume" onClick={this.props.toggleResume}>Resume</div>
                     </div>
                 </div>
             </Sticky>

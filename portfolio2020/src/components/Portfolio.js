@@ -12,7 +12,8 @@ export class Portfolio extends Component {
         super(props);
         this.state = {
             currentItem: 0,
-            projectDates: [['Oct.','Jul'],['Dec.','Jul.'],['Jul.','Apr.'],['Feb.','Dec.']]
+            projectDates: [['Oct.','Jul'],['Dec.','Jul.'],['Jul.','Apr.'],['Feb.','Dec.']],
+            
         }
     }
 

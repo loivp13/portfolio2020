@@ -1,0 +1,25 @@
+.Slideshow {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-self: center;
+  animation: slideshow 6s normal infinite;
+  & > div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    & > img {
+      width: auto;
+      height: 100%;
+    }
+  }
+  &_item:nth-child(2) {
+    transform: translateX(101%);
+  }
+  &_item:nth-child(3) {
+    transform: translateX(201%);
+  }
+  &_item:nth-child(4) {
+    transform: translateX(301%);
+  }
+}

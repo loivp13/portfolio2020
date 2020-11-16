@@ -3,10 +3,20 @@
 }
 .AboutMe {
   height: 35vh;
+
+  @media screen and(max-width: 970px) {
+    height: 30vh;
+  }
+  @media screen and(max-width: 720px) {
+    height: 30vh;
+  }
   &_container {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and(max-width: 720px) {
+      justify-content: space-around;
+    }
   }
   &_left {
     width: 30vw;
@@ -19,6 +29,9 @@
       @include header;
       font-weight: bold;
       height: auto;
+      @media screen and(max-width: 970px) {
+        font-size: 2.2rem;
+      }
     }
     &-image {
       width: auto;
@@ -36,6 +49,15 @@
     &-description {
       width: auto;
       font-size: 1.5rem;
+      @media screen and(max-width: 970px) {
+        font-size: 1.25rem;
+      }
+      @media screen and(max-width: 970px) {
+        font-size: 1rem;
+      }
+      @include respond("phone") {
+        width: 50vw;
+      }
     }
   }
 }
