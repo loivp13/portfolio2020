@@ -3,6 +3,8 @@
   &:hover &_inner {
     transform: rotateY(180deg);
   }
+  height: 100%;
+  display: flex;
   &_inner {
     position: relative;
     text-align: center;

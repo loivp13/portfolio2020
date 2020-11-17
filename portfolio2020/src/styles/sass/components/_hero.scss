@@ -22,6 +22,7 @@
     height: 30vh;
   }
   &_background {
+    height: 100%;
     @include backgroundCover;
     width: 110%;
     @include respond("phone") {

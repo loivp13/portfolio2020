@@ -685,7 +685,9 @@ div {
     height: 2rem; }
 
 .FlipCard {
-  perspective: 1000px; }
+  perspective: 1000px;
+  height: 100%;
+  display: flex; }
   .FlipCard:hover .FlipCard_inner {
     transform: rotateY(180deg); }
   .FlipCard_inner {
@@ -744,6 +746,7 @@ div {
     .Hero {
       height: 30vh; } }
   .Hero_background {
+    height: 100%;
     width: 100%;
     position: absolute;
     z-index: -5;
