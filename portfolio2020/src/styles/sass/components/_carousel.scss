@@ -38,7 +38,7 @@
       flex-direction: column;
       align-items: center;
       @include respond("phone") {
-        height: 80%;
+        height: 100%;
       }
       &-devices {
         width: 100%;
