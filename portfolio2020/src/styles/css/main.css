@@ -383,15 +383,26 @@ div {
       @media screen and (max-width: 970px) {
         .AboutMe_left-header {
           font-size: 2.2rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .AboutMe_left-header {
+          font-size: 1.5rem;
+          text-align: center;
+          width: 20vw; } }
     .AboutMe_left-image {
       width: auto;
       height: auto; }
       .AboutMe_left-image > img {
         width: 10rem;
         height: auto; }
+        @media only screen and (max-width: 37.5em) {
+          .AboutMe_left-image > img {
+            width: 5rem; } }
   .AboutMe_right {
     width: 30vw;
     height: auto; }
+    @media only screen and (max-width: 37.5em) {
+      .AboutMe_right {
+        width: 55vw; } }
     .AboutMe_right-description {
       width: auto;
       font-size: 1.5rem; }
@@ -403,7 +414,7 @@ div {
           font-size: 1rem; } }
       @media only screen and (max-width: 37.5em) {
         .AboutMe_right-description {
-          width: 50vw; } }
+          font-size: 0.9rem; } }
 
 .Carousel {
   height: 35rem;
@@ -426,7 +437,7 @@ div {
       width: 25rem; } }
   @media only screen and (max-width: 37.5em) {
     .Carousel {
-      height: 20rem;
+      height: 13rem;
       width: 15rem; } }
   .Carousel > * {
     scroll-snap-align: start; }
@@ -475,15 +486,21 @@ div {
     padding: 2rem;
     margin-bottom: 3rem;
     height: auto; }
+    @media only screen and (max-width: 37.5em) {
+      .Contact_header {
+        font-size: 2rem; } }
   .Contact_menu {
     height: auto;
     width: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 75em) {
       .Contact_menu {
         width: 80%; } }
+    @media only screen and (max-width: 37.5em) {
+      .Contact_menu {
+        width: 100%; } }
     .Contact_menu--item {
       width: 10rem;
       height: 8rem;
@@ -491,8 +508,8 @@ div {
       font-size: 2rem; }
       @media only screen and (max-width: 37.5em) {
         .Contact_menu--item {
-          font-size: 1rem;
-          width: 9rem; } }
+          font-size: 0.9rem;
+          width: 8rem; } }
     .Contact_menu--clipboard {
       position: absolute;
       animation: slideUpFading 1s; }
@@ -552,15 +569,19 @@ div {
       height: 50vh; } }
   @media screen and (max-width: 970px) {
     .Hero {
-      height: 35vh; } }
+      height: 40vh;
+      justify-content: center; } }
   @media only screen and (max-width: 37.5em) {
     .Hero {
-      height: 25vh; } }
+      height: 30vh; } }
   .Hero_background {
     width: 100%;
     position: absolute;
     z-index: -5;
     width: 110%; }
+    @media only screen and (max-width: 37.5em) {
+      .Hero_background {
+        height: 100%; } }
   .Hero_main {
     height: 50%; }
     @media only screen and (max-width: 75em) {
@@ -629,10 +650,11 @@ div {
         justify-content: end; } }
     @media only screen and (max-width: 37.5em) {
       .Navigation_menu {
-        font-size: 1.25rem; } }
+        font-size: 1rem;
+        transform: translateX(-20px); } }
     @media only screen and (max-width: 20em) {
       .Navigation_menu {
-        font-size: 1.25rem; } }
+        font-size: 1rem; } }
     .Navigation_menu--buttonOpen {
       display: none; }
       @media screen and (max-width: 720px) {
@@ -661,12 +683,21 @@ div {
           flex-direction: column;
           height: auto;
           position: absolute;
-          top: 4rem;
+          top: 5rem;
           background-color: white;
           padding: 1rem;
-          display: none; } }
+          visibility: hidden;
+          transition: all 0.5s; } }
       .Navigation_menu-items--displayOverride {
-        display: flex; }
+        display: flex;
+        visibility: visible; }
+        @media screen and (max-width: 719px) {
+          .Navigation_menu-items--displayOverride {
+            box-shadow: 10px 10px 10px;
+            border: 1px solid black;
+            animation: slideDown 0.5s; } }
+      .Navigation_menu-items--diaplayHide {
+        animation: slideUp 0.5s; }
     .Navigation_menu-item {
       height: auto;
       width: auto;
@@ -695,7 +726,7 @@ div {
   scroll-snap-align: start; }
   @media only screen and (max-width: 37.5em) {
     .Portfolio {
-      height: 70vh; } }
+      height: 50vh; } }
   .Portfolio_background {
     width: 100%;
     position: absolute;
@@ -718,12 +749,19 @@ div {
     font-weight: bold;
     justify-self: start;
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .Portfolio_header {
+        margin-bottom: 1rem;
+        font-size: 1.5rem; } }
   .Portfolio_main {
     width: 70%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      .Portfolio_main {
+        display: block; } }
     .Portfolio_main--left {
       width: auto;
       height: 100%;
@@ -733,9 +771,18 @@ div {
       @media only screen and (max-width: 56.25em) {
         .Portfolio_main--left {
           margin-right: 15vw; } }
+      @media only screen and (max-width: 37.5em) {
+        .Portfolio_main--left {
+          transform: rotate(90deg);
+          margin-right: 0;
+          display: none; } }
     .Portfolio_main--right {
       width: auto;
       height: auto; }
+      @media only screen and (max-width: 37.5em) {
+        .Portfolio_main--right {
+          display: flex;
+          justify-content: center; } }
 
 .Resume {
   width: auto;
@@ -780,6 +827,9 @@ div {
   display: flex;
   align-items: center;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .TimeScale {
+      transform: translatex(-5rem); } }
   .TimeScale--line {
     border: 1px solid white;
     height: 90%;
@@ -841,6 +891,9 @@ div {
   .TimeScale--date {
     color: white;
     height: auto; }
+    @media only screen and (max-width: 37.5em) {
+      .TimeScale--date {
+        transform: rotate(-90deg); } }
   .TimeScale--pointer {
     height: 7px;
     position: absolute;
@@ -853,7 +906,8 @@ div {
       height: 6rem; }
       @media only screen and (max-width: 56.25em) {
         .TimeScale--pointer_dates {
-          font-size: 0.9rem; } }
+          font-size: 0.9rem;
+          height: 5rem; } }
     .TimeScale--pointer-hrLine {
       width: 20px;
       height: 2px;
@@ -877,6 +931,9 @@ div {
     .TimeScale--pointer-date {
       height: auto;
       color: white; }
+      @media only screen and (max-width: 37.5em) {
+        .TimeScale--pointer-date {
+          transform: rotate(-90deg); } }
     .TimeScale--pointer-dates {
       display: flex;
       flex-direction: column;

@@ -51,7 +51,7 @@ export class Navigation extends Component {
     }
 
     renderButtons = () => {
-        if(this.state.open === 0){
+        if(this.state.open){
             return (
                 <div onClick={this.handleToggleMenu} className="Navigation_menu--buttonOpen">
                     <img src={menuListIcon} alt=""/>
@@ -70,7 +70,7 @@ export class Navigation extends Component {
         if(this.state.open) {
             return 'Navigation_menu-items--displayOverride'
         } else {
-            return ''
+            return 'Navigation_menu-items--diaplayHide'
         }
     }
     

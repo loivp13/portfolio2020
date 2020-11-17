@@ -20,7 +20,7 @@
     width: 25rem;
   }
   @include respond("phone") {
-    height: 20rem;
+    height: 13rem;
     width: 15rem;
   }
   & > * {

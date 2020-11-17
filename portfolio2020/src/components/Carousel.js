@@ -40,9 +40,7 @@ export class Carousel extends Component {
     }
     
     renderResponsiveCarousel = (arrImages) => {
-        console.log(this.props.windowWidth)
         if(this.props.windowWidth < 600){
-            console.log(600)
             return <Slideshow arrImages={arrImages}></Slideshow>
         } else {
             return arrImages[0]

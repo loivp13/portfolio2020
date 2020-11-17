@@ -2,7 +2,7 @@
   height: 100vh;
   scroll-snap-align: start;
   @include respond("phone") {
-    height: 70vh;
+    height: 50vh;
   }
   &_background {
     @include backgroundCover;
@@ -25,6 +25,10 @@
     font-weight: bold;
     justify-self: start;
     margin-bottom: 3rem;
+    @include respond("phone") {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
   }
 
   &_main {
@@ -33,7 +37,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    @include respond("phone") {
+      display: block;
+    }
     &--left {
       width: auto;
       height: 100%;
@@ -46,12 +52,19 @@
       }
 
       @include respond("phone") {
-        // margin-right: 20vw;
+        transform: rotate(90deg);
+        // display: block;
+        margin-right: 0;
+        display: none;
       }
     }
     &--right {
       width: auto;
       height: auto;
+      @include respond("phone") {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }

@@ -28,7 +28,6 @@
     justify-content: end;
 
     font-size: 2rem;
-
     @include respond("tab-land") {
       font-size: 1.45rem;
     }
@@ -40,10 +39,11 @@
       justify-content: end;
     }
     @include respond("phone") {
-      font-size: 1.25rem;
+      font-size: 1rem;
+      transform: translateX(-20px);
     }
     @include respond("phoneXS") {
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
 
     &--buttons {
@@ -76,20 +76,29 @@
       justify-content: center;
       display: flex;
       align-items: center;
+
       @media screen and (max-width: (720px)) {
         border-radius: 5px;
         flex-direction: column;
         height: auto;
         position: absolute;
-        top: 4rem;
+        top: 5rem;
         background-color: white;
         padding: 1rem;
-        display: none;
+        visibility: hidden;
+        transition: all 0.5s;
       }
       &--displayOverride {
         display: flex;
-        @media screen and (min-width: 719px) {
+        visibility: visible;
+        @media screen and (max-width: 719px) {
+          box-shadow: 10px 10px 10px;
+          border: 1px solid black;
+          animation: slideDown 0.5s;
         }
+      }
+      &--diaplayHide {
+        animation: slideUp 0.5s;
       }
     }
     &-item {

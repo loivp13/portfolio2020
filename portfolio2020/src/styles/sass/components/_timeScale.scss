@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
   position: relative;
+  @include respond("phone") {
+    transform: translatex(-5rem);
+  }
 
   &--line {
     border: 1px solid white;
@@ -77,6 +80,9 @@
   &--date {
     color: white;
     height: auto;
+    @include respond("phone") {
+      transform: rotate(-90deg);
+    }
   }
   &--pointer {
     height: 7px;
@@ -93,6 +99,7 @@
       height: 6rem;
       @include respond("tab-port") {
         font-size: 0.9rem;
+        height: 5rem;
       }
     }
 
@@ -130,6 +137,9 @@
     &-date {
       height: auto;
       color: white;
+      @include respond("phone") {
+        transform: rotate(-90deg);
+      }
     }
     &-dates {
       display: flex;
