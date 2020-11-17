@@ -1,6 +1,7 @@
 .Carousel {
   height: 35rem;
   width: auto;
+  -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
   overflow: scroll;
   &::-webkit-scrollbar {

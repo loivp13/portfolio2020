@@ -1,6 +1,7 @@
 .d_hidden {
   position: absolute;
   opacity: 0;
+  -webkit-animation: slideUp 0.5s;
   animation: slideUp 0.5s;
 }
 

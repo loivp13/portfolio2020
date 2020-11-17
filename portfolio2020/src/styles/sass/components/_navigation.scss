@@ -7,6 +7,7 @@
   align-items: center;
   background-color: rgb(255, 255, 255);
   box-shadow: 20px 0px 25px;
+  -webkit-animation: slideDown 0.5s linear;
   animation: slideDown 0.5s linear;
   &_logo {
     width: auto;
@@ -25,7 +26,7 @@
     width: auto;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
 
     font-size: 2rem;
     @include respond("tab-land") {
@@ -94,10 +95,12 @@
         @media screen and (max-width: 719px) {
           box-shadow: 10px 10px 10px;
           border: 1px solid black;
+          -webkit-animation: slideDown 0.5s;
           animation: slideDown 0.5s;
         }
       }
       &--diaplayHide {
+        -webkit-animation: slideUp 0.5s;
         animation: slideUp 0.5s;
       }
     }

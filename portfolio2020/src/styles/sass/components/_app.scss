@@ -2,6 +2,7 @@ div {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .App {
+  -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
   position: relative;
 }

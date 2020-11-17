@@ -83,6 +83,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -312,11 +313,25 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes slideDown {
+  from {
+    transform: translateY(-5rem); }
+  to {
+    transform: translateY(0); } }
+
 @keyframes slideDown {
   from {
     transform: translateY(-5rem); }
   to {
     transform: translateY(0); } }
+
+@-webkit-keyframes slideUp {
+  from {
+    transform: translateY(0rem);
+    opacity: 100%; }
+  to {
+    transform: translateY(-5rem);
+    opacity: 0%; } }
 
 @keyframes slideUp {
   from {
@@ -326,11 +341,27 @@ template {
     transform: translateY(-5rem);
     opacity: 0%; } }
 
+@-webkit-keyframes slideDownResume {
+  from {
+    transform: translateY(-40rem); }
+  to {
+    transform: translateY(0); } }
+
 @keyframes slideDownResume {
   from {
     transform: translateY(-40rem); }
   to {
     transform: translateY(0); } }
+
+@-webkit-keyframes slideshow {
+  16.5% {
+    transform: translateX(0%); }
+  49.5% {
+    transform: translateX(-100%); }
+  83.16% {
+    transform: translateX(-200%); }
+  100% {
+    transform: translateX(-300%); } }
 
 @keyframes slideshow {
   16.5% {
@@ -346,6 +377,7 @@ div {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
 
 .App {
+  -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
   position: relative; }
 
@@ -419,6 +451,7 @@ div {
 .Carousel {
   height: 35rem;
   width: auto;
+  -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
   overflow: scroll; }
   .Carousel::-webkit-scrollbar {
@@ -517,6 +550,7 @@ div {
           width: 8rem; } }
     .Contact_menu--clipboard {
       position: absolute;
+      -webkit-animation: slideUpFading 1s;
       animation: slideUpFading 1s; }
   .Contact_clipboardSVG {
     width: 2rem;
@@ -627,6 +661,7 @@ div {
   align-items: center;
   background-color: white;
   box-shadow: 20px 0px 25px;
+  -webkit-animation: slideDown 0.5s linear;
   animation: slideDown 0.5s linear; }
   .Navigation_logo {
     width: auto;
@@ -641,7 +676,7 @@ div {
     width: auto;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     font-size: 2rem; }
     @media only screen and (max-width: 75em) {
       .Navigation_menu {
@@ -700,8 +735,10 @@ div {
           .Navigation_menu-items--displayOverride {
             box-shadow: 10px 10px 10px;
             border: 1px solid black;
+            -webkit-animation: slideDown 0.5s;
             animation: slideDown 0.5s; } }
       .Navigation_menu-items--diaplayHide {
+        -webkit-animation: slideUp 0.5s;
         animation: slideUp 0.5s; }
     .Navigation_menu-item {
       height: auto;
@@ -792,6 +829,7 @@ div {
 .Resume {
   width: auto;
   height: auto;
+  -webkit-animation: slideDownResume 1s;
   animation: slideDownResume 1s; }
   .Resume_container {
     top: 0;
@@ -809,6 +847,7 @@ div {
   position: relative;
   justify-content: center;
   align-self: center;
+  -webkit-animation: slideshow 6s normal infinite;
   animation: slideshow 6s normal infinite; }
   .Slideshow > div {
     position: absolute;
@@ -947,6 +986,7 @@ div {
 .d_hidden {
   position: absolute;
   opacity: 0;
+  -webkit-animation: slideUp 0.5s;
   animation: slideUp 0.5s; }
 
 .d_none {

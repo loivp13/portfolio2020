@@ -1,6 +1,7 @@
 .Resume {
   width: auto;
   height: auto;
+  -webkit-animation: slideDownResume 1s;
   animation: slideDownResume 1s;
   &_container {
     top: 0;

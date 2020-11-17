@@ -53,6 +53,7 @@
     }
     &--clipboard {
       position: absolute;
+      -webkit-animation: slideUpFading 1s;
       animation: slideUpFading 1s;
     }
   }

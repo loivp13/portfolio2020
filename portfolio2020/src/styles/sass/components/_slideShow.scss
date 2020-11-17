@@ -3,6 +3,7 @@
   position: relative;
   justify-content: center;
   align-self: center;
+  -webkit-animation: slideshow 6s normal infinite;
   animation: slideshow 6s normal infinite;
   & > div {
     position: absolute;
