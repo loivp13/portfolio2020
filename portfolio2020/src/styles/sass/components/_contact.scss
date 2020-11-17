@@ -2,6 +2,9 @@
   position: relative;
   height: 60vh;
   overflow: hidden;
+  @include respond("phone") {
+    height: 40vh;
+  }
 
   &_container {
     display: flex;
@@ -21,6 +24,8 @@
     height: auto;
     @include respond("phone") {
       font-size: 2rem;
+      padding: 0;
+      margin-bottom: 0;
     }
   }
 
