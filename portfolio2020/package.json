@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "SET PORT=3001 && react-scripts start",
-    "build": "PORT=3001 && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar src/styles/sass/main.scss -o src/styles/css",
