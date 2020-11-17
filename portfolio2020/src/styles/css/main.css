@@ -993,6 +993,10 @@ div {
   .Slideshow_item:nth-child(4) {
     transform: translateX(301%); }
 
+.Stocky_show {
+  width: auto;
+  height: auto; }
+
 .color_white {
   color: white !important; }
 
