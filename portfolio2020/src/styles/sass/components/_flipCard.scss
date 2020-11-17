@@ -8,6 +8,7 @@
     text-align: center;
     transition: 0.8s;
     transform-style: preserve-3d;
+    height: auto;
   }
 
   &_front,
@@ -18,6 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     & > input {
       margin-right: -2rem;
       border: none;
@@ -43,6 +45,7 @@
   &_back {
     background-color: #427cae;
     transform: rotateY(180deg);
+    z-index: -1;
     & > a {
       color: white;
       &:visited {
