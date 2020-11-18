@@ -51,7 +51,7 @@ export class Navigation extends Component {
     }
 
     renderButtons = () => {
-        if(this.state.open){
+        if(!this.state.open){
             return (
                 <div onClick={this.handleToggleMenu} className="Navigation_menu--buttonOpen">
                     <img src={menuListIcon} alt=""/>

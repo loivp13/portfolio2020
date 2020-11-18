@@ -442,13 +442,13 @@ template {
   from {
     transform: translateY(-5rem); }
   to {
-    transform: translateY(0); } }
+    transform: translateY(0rem); } }
 
 @keyframes slideDown {
   from {
     transform: translateY(-5rem); }
   to {
-    transform: translateY(0); } }
+    transform: translateY(0rem); } }
 
 @-webkit-keyframes slideUp {
   from {
@@ -497,6 +497,18 @@ template {
     transform: translateX(-200%); }
   100% {
     transform: translateX(-300%); } }
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(5rem); }
+  to {
+    transform: translateX(0); } }
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0rem); }
+  to {
+    transform: translateX(15rem); } }
 
 div {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
@@ -600,8 +612,25 @@ div {
     .Carousel {
       height: 13rem;
       width: 15rem;
-      scrollbar-width: 1px;
-      overflow-y: scroll; } }
+      overflow-y: scroll;
+      overflow-x: hidden;
+      direction: rtl;
+      scroll-margin-left: 5px;
+      padding: 1rem;
+      scrollbar-width: thin;
+      scrollbar-color: black; }
+      .Carousel::-webkit-scrollbar {
+        width: 2px;
+        background: rgba(0, 179, 228, 0);
+        display: block; }
+      .Carousel::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgba(255, 255, 255, 0);
+        border-radius: 10px; }
+      .Carousel::-webkit-scrollbar-thumb {
+        background: white;
+        border-radius: 50px;
+        width: 1rem;
+        height: 1rem; } }
   .Carousel > * {
     scroll-snap-align: start; }
   .Carousel--item {
@@ -858,23 +887,26 @@ div {
           flex-direction: column;
           height: auto;
           position: absolute;
-          top: 5rem;
           background-color: white;
           padding: 1rem;
           visibility: hidden;
-          transition: all 0.5s; } }
+          transition: all 0.5s;
+          top: 6rem; } }
       .Navigation_menu-items--displayOverride {
         display: flex;
         visibility: visible; }
         @media screen and (max-width: 719px) {
           .Navigation_menu-items--displayOverride {
             box-shadow: 10px 10px 10px;
+            top: 5rem;
             border: 1px solid black;
-            -webkit-animation: slideDown 0.5s;
-            animation: slideDown 0.5s; } }
+            border-top: none;
+            -webkit-animation: slideLeft 0.5s;
+            animation: slideLeft 0.5s; } }
       .Navigation_menu-items--diaplayHide {
-        -webkit-animation: slideUp 0.5s;
-        animation: slideUp 0.5s; }
+        top: 6rem;
+        -webkit-animation: slideRight 0.5s;
+        animation: slideRight 0.5s; }
     .Navigation_menu-item {
       height: auto;
       width: auto;

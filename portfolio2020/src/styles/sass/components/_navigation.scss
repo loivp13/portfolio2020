@@ -83,25 +83,28 @@
         flex-direction: column;
         height: auto;
         position: absolute;
-        top: 5rem;
         background-color: white;
         padding: 1rem;
         visibility: hidden;
         transition: all 0.5s;
+        top: 6rem;
       }
       &--displayOverride {
         display: flex;
         visibility: visible;
         @media screen and (max-width: 719px) {
           box-shadow: 10px 10px 10px;
+          top: 5rem;
           border: 1px solid black;
-          -webkit-animation: slideDown 0.5s;
-          animation: slideDown 0.5s;
+          border-top: none;
+          -webkit-animation: slideLeft 0.5s;
+          animation: slideLeft 0.5s;
         }
       }
       &--diaplayHide {
-        -webkit-animation: slideUp 0.5s;
-        animation: slideUp 0.5s;
+        top: 6rem;
+        -webkit-animation: slideRight 0.5s;
+        animation: slideRight 0.5s;
       }
     }
     &-item {

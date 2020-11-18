@@ -3,7 +3,7 @@
     transform: translateY(-5rem);
   }
   to {
-    transform: translateY(0);
+    transform: translateY(0rem);
   }
 }
 @keyframes slideDown {
@@ -11,7 +11,7 @@
     transform: translateY(-5rem);
   }
   to {
-    transform: translateY(0);
+    transform: translateY(0rem);
   }
 }
 @-webkit-keyframes slideUp {
@@ -80,5 +80,22 @@
   }
   100% {
     transform: translateX(-300%);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(5rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(0rem);
+  }
+  to {
+    transform: translateX(15rem);
   }
 }
