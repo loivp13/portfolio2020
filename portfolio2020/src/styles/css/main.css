@@ -624,7 +624,7 @@ div {
         background: rgba(0, 179, 228, 0);
         display: block; }
       .Carousel::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px rgba(255, 255, 255, 0);
+        box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.282);
         border-radius: 10px; }
       .Carousel::-webkit-scrollbar-thumb {
         background: white;
