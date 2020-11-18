@@ -37,6 +37,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      height: 65%;
+    }
     @include respond("phone") {
       display: block;
     }

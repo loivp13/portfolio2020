@@ -971,6 +971,9 @@ div {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      .Portfolio_main {
+        height: 65%; } }
     @media only screen and (max-width: 37.5em) {
       .Portfolio_main {
         display: block; } }
