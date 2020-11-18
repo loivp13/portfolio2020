@@ -599,7 +599,9 @@ div {
   @media only screen and (max-width: 37.5em) {
     .Carousel {
       height: 13rem;
-      width: 15rem; } }
+      width: 15rem;
+      scrollbar-width: 1px;
+      overflow-y: scroll; } }
   .Carousel > * {
     scroll-snap-align: start; }
   .Carousel--item {
@@ -652,7 +654,7 @@ div {
     height: auto; }
     @media only screen and (max-width: 37.5em) {
       .Contact_header {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0;
         margin-bottom: 0; } }
   .Contact_menu {

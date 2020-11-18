@@ -27,6 +27,11 @@
   @include respond("phone") {
     height: 13rem;
     width: 15rem;
+
+    scrollbar-width: 1px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+    }
   }
   & > * {
     scroll-snap-align: start;
