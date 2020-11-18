@@ -16,7 +16,7 @@ export class AboutMe extends Component {
                     </div>
                     <div className="AboutMe_right">
                         <div className="AboutMe_right-description">
-                            Hello there! My name is Loi Pham and I have been doing web development since 2017. I specialize in React and it's ecosystem for the Front End and NodeJS for the Back End. I'm continiously adding more tools under my belt as I continue my journey developing websites and apps.
+                            Hello there! My name is Loi Pham and I have been doing web development since 2017. I specialize in React and its ecosystem for the Front End and NodeJS for the Back End. I'm continiously adding more tools under my belt as I continue my journey developing websites and apps.
                         </div>
                     </div>
                 </div>
