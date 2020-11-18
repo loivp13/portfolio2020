@@ -95,7 +95,11 @@ export class Navigation extends Component {
                             <div className="Navigation_menu-item">
                                 <a href="#contact">Contact</a>
                             </div>
-                            <div className="Navigation_menu-item Navigation_resume" onClick={this.props.toggleResume}><div id="resume">Resume</div></div>
+                            <div className="Navigation_menu-item Navigation_resume" onClick={(e) => {
+                                this.props.toggleResume();
+                                this.handleToggleMenu();
+                            }
+                            }><div id="resume">Resume</div></div>
                         </div>
                     </div>
                 </div>
