@@ -904,9 +904,10 @@ div {
             -webkit-animation: slideLeft 0.5s;
             animation: slideLeft 0.5s; } }
       .Navigation_menu-items--diaplayHide {
-        top: 6rem;
-        -webkit-animation: slideRight 0.5s;
-        animation: slideRight 0.5s; }
+        top: 6rem; }
+        @media screen and (max-width: 719px) {
+          .Navigation_menu-items--diaplayHide {
+            animation: slideRight 0.5s; } }
     .Navigation_menu-item {
       height: auto;
       width: auto;
@@ -1008,6 +1009,12 @@ div {
     width: 100vw;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.398); }
+  @media only screen and (max-width: 37.5em) {
+    .Resume_page {
+      overflow: scroll;
+      position: relative;
+      height: 70vh;
+      width: 100vw; } }
 
 .Slideshow {
   display: flex;

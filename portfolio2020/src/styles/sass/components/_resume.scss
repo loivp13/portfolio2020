@@ -15,7 +15,11 @@
     background-color: rgba(0, 0, 0, 0.398);
   }
   &_page {
+    @include respond("phone") {
+      overflow: scroll;
+      position: relative;
+      height: 70vh;
+      width: 100vw;
+    }
   }
-}
-.react-pdf__Page__canvas {
 }

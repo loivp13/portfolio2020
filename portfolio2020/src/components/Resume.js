@@ -38,19 +38,19 @@ export class Resume extends Component {
     }
     renderScale () {
       if(  this.props.windowWidth < 1200 ){
-            return .9
+            return .8
         }
        else if (this.props.windowWidth  < 900 ){
-            return .7
+            return .6
         }
         else if(this.props.windowSize < 720) {
-            return .5
+            return .4
         }
         else if(this.props.windowSize < 600) {
-            return .3
+            return .2
         }
         else {
-            return 1
+            return .9
         }
     }
     
@@ -58,10 +58,10 @@ export class Resume extends Component {
         return (
             <div onClick={this.props.toggleResume} className="Resume_container" style={{paddingTop: `${this.state.pxScrolled }px`}}>
 
-               <Document className='Resume'
+               <Document renderMode='svg' className='Resume'
                file='Loi-Pham_Resume11-20.pdf'
                >
-                   <Page scale={this.renderScale()} onGetAnnotationsSuccess={this.changeTargetToBlank}  width={650}  className='Resume_page' pageNumber={1}></Page>
+                   <Page renderMode='svg' scale={this.renderScale()} onGetAnnotationsSuccess={this.changeTargetToBlank}  width={650}  className='Resume_page' pageNumber={1}></Page>
                </Document>
                </div>
         )
